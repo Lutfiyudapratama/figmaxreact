@@ -1,33 +1,48 @@
 import React from 'react'
-import { Card, Button, Checkbox, Label, TextInput } from "flowbite-react";
+import picture from '../assets/borobudurv2.jpeg'
+import { Card, Label, TextInput } from "flowbite-react"
+import { Datepicker } from "flowbite-react";
 const Form = () => {
   return (
     <div className='flex flex-center justify-center'>
-        <Card
-        className="max-w-sm w-full sm:w-1/2 lg:w-1/3 p-2">
-        
-       <form className="flex max-w-md flex-col gap-4">
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="email1" value="Your email" />
+      <section className="relative">
+        <img
+          src={picture}
+          alt="borobudur"
+          className="w-[10000px] h-[550px] object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-40">
+          <h1 className="text-4xl font-bold">Nikmati Perjalanan dengan T Transport</h1>
+          <form className="mt-7">
+            <div className="flex space-x-1">
+              <Card href="#" className="max-w-sm">
+                <div className="mb-0 block">
+                  <Label htmlFor="small" value="From" />
+                </div>
+                <TextInput id="small" type="text" sizing="sm" />
+                <div className="mb-0 block">
+                  <Label htmlFor="date" value="Departure date" />
+                  <Datepicker minDate={new Date(2023, 0, 1)} maxDate={new Date(2023, 3, 30)} />
+                </div>
+                  </Card>
+                  
+              <Card href="#" className="max-w-sm">
+                <div className="mb-0 block">
+                  <Label htmlFor="small" value="To" />
+                </div>
+                <TextInput id="small" type="text" sizing="sm" />
+                <div className="mb-0 block">
+                  <Label htmlFor="small" value="return date" />
+                </div>
+                <Datepicker minDate={new Date(2023, 0, 1)} maxDate={new Date(2023, 3, 30)} />
+                  </Card>
+            </div>
+          </form>
         </div>
-        <TextInput id="email1" type="email" placeholder="name@flowbite.com" required />
-      </div>
-      <div>
-        <div className="mb-2 block">
-          <Label htmlFor="password1" value="Your password" />
-        </div>
-        <TextInput id="password1" type="password" required />
-      </div>
-      <div className="flex items-center gap-2">
-        <Checkbox id="remember" />
-        <Label htmlFor="remember">Remember me</Label>
-      </div>
-      <Button type="submit">Submit</Button>
-    </form>
-    </Card>
+      </section>
     </div>
-  )
+  );
 }
-
 export default Form;
+
+
