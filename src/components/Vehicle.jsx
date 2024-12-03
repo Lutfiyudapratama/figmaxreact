@@ -6,6 +6,11 @@ import picture3 from '../assets/vehicle3.jpeg';
 
 const Vehicle = () => {
   return (
+    <div className='flex flex-wrap justify-center items-center'>
+      <center>
+       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+       Kendaraan yg tersedia</h5>
+       </center>
     <div className='flex flex-wrap justify-between'>
       <Card
         className="max-w-sm w-full sm:w-1/2 lg:w-1/3 p-2"
@@ -36,6 +41,7 @@ const Vehicle = () => {
           <div className='text'>see more</div>
         </Button>
       </Card>
+      </div>
     </div>
   );
 }
