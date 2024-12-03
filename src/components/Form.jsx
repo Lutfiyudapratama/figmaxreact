@@ -12,7 +12,7 @@ const Form = () => {
           className="w-[10000px] h-[550px] object-cover"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white bg-black bg-opacity-40">
-          <h1 className="text-4xl font-bold">Nikmati Perjalanan dengan T Transport</h1>
+          <h1 className="text-4xl font-bold">Nikmati Perjalanan dengan F Transport</h1>
           <form className="mt-7">
             <div className="flex space-x-1">
               <Card href="#" className="max-w-sm">
